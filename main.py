@@ -33,9 +33,9 @@ def main():
 
     excel_data_df = pandas.read_excel('wine.xlsx',
                                       sheet_name='Лист1').fillna('')
-    wines_dict = excel_data_df.to_dict(orient='records')
+    wines_collection = excel_data_df.to_dict(orient='records')
     grouped_wines = defaultdict(list)
-    for wine in wines_dict:
+    for wine in wines_collection:
         category = wine.get('Категория', '').strip()
         grouped_wines[category].append(wine)
 
