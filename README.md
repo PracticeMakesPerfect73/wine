@@ -23,15 +23,19 @@ venv\Scripts\activate  # Для Windows
 
 Используйте pip (или pip3, есть есть конфликт с Python2) для установки зависимостей:
 
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 ## Запуск
 
 В папке проекта создайте таблицу Excel по примеру:
 ![Снимок экрана от 2025-04-09 21-55-29](https://github.com/user-attachments/assets/c6678545-1120-45f3-a970-8b8167be5be9)
 
-Запустите сайт командой `python3 main.py`
-
+Запустите сайт командой 
+```
+python3 main.py
+```
 Перейдите на сайт по адресу [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ## Цели проекта
