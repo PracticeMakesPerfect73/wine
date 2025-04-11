@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 Запустите сайт командой 
 ```
-python3 main.py
+python3 main.py -f путь_к_файлу
 ```
 Перейдите на сайт по адресу [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
