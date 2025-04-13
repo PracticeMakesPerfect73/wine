@@ -44,7 +44,7 @@ python3 main.py путь_к_файлу/wines.xlsx
 ```
 или просто:
 ```
-python3 main.py -f путь_к_файлу
+python3 main.py
 ```
 если переменная окружения установлена.
 
