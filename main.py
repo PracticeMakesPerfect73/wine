@@ -26,20 +26,25 @@ def choose_year_word(years_since_opening):
 def main():
     load_dotenv()
 
-    parser = argparse.ArgumentParser(description='Введите путь до файла с винами')
+    parser = argparse.ArgumentParser(
+        description='Создание HTML-страницы с винами по Excel-файлу.'
+    )
+
     parser.add_argument(
-        '-f', '--file',
-        help='Путь до Excel-файла',
-        default=os.getenv('WINES_DEFAULT_PATH')
+        'file',
+        type=Path,
+        nargs='?',
+        default=os.getenv('WINES_DEFAULT_PATH'),
+        help='Путь до Excel-файла.'
     )
     args = parser.parse_args()
 
-    file_name = args.file
-    if not file_name:
+    file_path = args.file
+
+    if not file_path:
         print('Ошибка: путь к файлу не указан.')
         return
 
-    file_path = Path(file_name)
     if not file_path.exists():
         print(f'Ошибка: файл "{file_path}" не найден')
         return
